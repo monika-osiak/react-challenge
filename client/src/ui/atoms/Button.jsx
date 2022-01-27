@@ -2,6 +2,10 @@ import * as React from 'react';
 import { Button as MuiButton } from '@mui/material';
 import { createTheme } from "@mui/material/styles";
 
+function doSomething() {
+  alert('I have no idea what I\'m doing honestly')
+};
+
 let myTheme = createTheme({
   palette: {
     primary: {
@@ -158,5 +162,5 @@ myTheme = createTheme(myTheme, {
 })
 
 export function Button({ children, ...props }) {
-  return <MuiButton {...props} theme={ myTheme }>{children}</MuiButton>;
+  return <MuiButton {...props} theme={ myTheme } onClick={doSomething}>{children}</MuiButton>;
 }
