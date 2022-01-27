@@ -37,90 +37,42 @@ let myTheme = createTheme({
   }
 });
 
-myTheme = createTheme(myTheme,{
+myTheme = createTheme(myTheme, {
   components: {
     MuiButton: {
-      variants: [
-        {
-          props: {
-            color: 'primary',
-            variant: 'contained'
-          },
-          style: {
-            backgroundColor: myTheme.palette.primary.main
-          }
+      styleOverrides: {
+        containedPrimary: {
+          backgroundColor: myTheme.palette.primary.main
         },
-        {
-          props: {
-            color: 'primary',
-            variant: 'outlined'
-          },
-          style: {
-            backgroundColor: myTheme.palette.secondary.main,
-            "border-style": "none"
-          }
+        outlinedPrimary: {
+          backgroundColor: myTheme.palette.secondary.main,
+          borderStyle: "none"
         },
-        {
-          props: {
-            color: 'error',
-            variant: 'contained'
-          },
-          style: {
-            color: myTheme.palette.error.main,
-            backgroundColor: myTheme.palette.error.light
-          }
+        containedError: {
+          color: myTheme.palette.error.main,
+          backgroundColor: myTheme.palette.error.light
         },
-        {
-          props: {
-            color: 'error',
-            variant: 'outlined'
-          },
-          style: {
-            backgroundColor: myTheme.palette.grey.background
-          }
+        outlinedError: {
+          backgroundColor: myTheme.palette.grey.background
         },
-        {
-          props: {
-            color: 'success',
-            variant: 'contained'
-          },
-          style: {
-            backgroundColor: myTheme.palette.success.light,
-            color: myTheme.palette.success.dark
-          }
+        containedSuccess: {
+          backgroundColor: myTheme.palette.success.light,
+          color: myTheme.palette.success.dark
         },
-        {
-          props: {
-            color: 'success',
-            variant: 'outlined'
-          },
-          style: {
-            backgroundColor: myTheme.palette.grey.background
-          }
+        outlinedSuccess: {
+          backgroundColor: myTheme.palette.grey.background
         },
-        {
-          props: {
-            color: 'warning',
-            variant: 'contained'
-          },
-          style: {
-            backgroundColor: myTheme.palette.warning.light,
-            color: myTheme.palette.warning.dark
-          }
+        containedWarning: {
+          backgroundColor: myTheme.palette.warning.light,
+          color: myTheme.palette.warning.dark
         },
-        {
-          props: {
-            color: 'warning',
-            variant: 'outlined'
-          },
-          style: {
-            backgroundColor: myTheme.palette.grey.background
-          }
-        }
-      ],
-    },
+        outlinedWarning: {
+          backgroundColor: myTheme.palette.grey.background
+        },
+      }
+    }
   }
-});
+})
 
 export function Button({ children, ...props }) {
   return <MuiButton {...props} theme={ myTheme }>{children}</MuiButton>;
