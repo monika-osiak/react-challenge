@@ -42,15 +42,79 @@ myTheme = createTheme(myTheme,{
     MuiButton: {
       variants: [
         {
-          props: { variant: 'contained' },
+          props: {
+            color: 'primary',
+            variant: 'contained'
+          },
           style: {
             backgroundColor: myTheme.palette.primary.main
-          },
+          }
         },
         {
-          props: { variant: 'outlined' },
+          props: {
+            color: 'primary',
+            variant: 'outlined'
+          },
           style: {
-            backgroundColor: myTheme.palette.secondary.main
+            backgroundColor: myTheme.palette.secondary.main,
+            "border-style": "none"
+          }
+        },
+        {
+          props: {
+            color: 'error',
+            variant: 'contained'
+          },
+          style: {
+            color: myTheme.palette.error.main,
+            backgroundColor: myTheme.palette.error.light
+          }
+        },
+        {
+          props: {
+            color: 'error',
+            variant: 'outlined'
+          },
+          style: {
+            backgroundColor: myTheme.palette.grey.background
+          }
+        },
+        {
+          props: {
+            color: 'success',
+            variant: 'contained'
+          },
+          style: {
+            backgroundColor: myTheme.palette.success.light,
+            color: myTheme.palette.success.dark
+          }
+        },
+        {
+          props: {
+            color: 'success',
+            variant: 'outlined'
+          },
+          style: {
+            backgroundColor: myTheme.palette.grey.background
+          }
+        },
+        {
+          props: {
+            color: 'warning',
+            variant: 'contained'
+          },
+          style: {
+            backgroundColor: myTheme.palette.warning.light,
+            color: myTheme.palette.warning.dark
+          }
+        },
+        {
+          props: {
+            color: 'warning',
+            variant: 'outlined'
+          },
+          style: {
+            backgroundColor: myTheme.palette.grey.background
           }
         }
       ],
