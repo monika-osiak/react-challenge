@@ -41,6 +41,12 @@ myTheme = createTheme(myTheme, {
   components: {
     MuiButton: {
       styleOverrides: {
+        root: {
+          '&.Mui-disabled': {
+            backgroundColor: myTheme.palette.grey.level1,
+            color: myTheme.palette.grey.level3
+          }
+        },
         containedPrimary: {
           backgroundColor: myTheme.palette.primary.main,
           '&:hover': {
@@ -52,7 +58,7 @@ myTheme = createTheme(myTheme, {
         },
         outlinedPrimary: {
           backgroundColor: myTheme.palette.secondary.main,
-          borderStyle: "none",
+          border: "none",
           '&:hover': {
             backgroundColor: myTheme.palette.secondary.dark,
             borderStyle: "none"
@@ -61,6 +67,9 @@ myTheme = createTheme(myTheme, {
             backgroundColor: myTheme.palette.secondary.dark,
             borderStyle: "none"
           },
+          '&.Mui-disabled': {
+            border: "none"
+          }
         },
         containedError: {
           color: myTheme.palette.error.main,
@@ -81,6 +90,11 @@ myTheme = createTheme(myTheme, {
           },
           '&:active': {
             backgroundColor: myTheme.palette.error.light
+          },
+          '&.Mui-disabled': {
+            color: myTheme.palette.grey.level2,
+            backgroundColor: myTheme.palette.grey.background,
+            borderColor: myTheme.palette.grey.level2
           }
         },
         containedSuccess: {
@@ -103,6 +117,11 @@ myTheme = createTheme(myTheme, {
           },
           '&:active': {
             borderStyle: "1px solid myTheme.palette.success.main"
+          },
+          '&.Mui-disabled': {
+            color: myTheme.palette.grey.level2,
+            backgroundColor: myTheme.palette.grey.background,
+            borderColor: myTheme.palette.grey.level2
           }
         },
         containedWarning: {
@@ -126,6 +145,11 @@ myTheme = createTheme(myTheme, {
           '&:active': {
             backgroundColor: myTheme.palette.warning.light,
             borderStyle: "1px solid myTheme.palette.warning.main"
+          },
+          '&.Mui-disabled': {
+            color: myTheme.palette.grey.level2,
+            backgroundColor: myTheme.palette.grey.background,
+            borderColor: myTheme.palette.grey.level2
           }
         },
       }
