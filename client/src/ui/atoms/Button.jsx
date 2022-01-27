@@ -45,6 +45,9 @@ myTheme = createTheme(myTheme, {
           backgroundColor: myTheme.palette.primary.main,
           '&:hover': {
             backgroundColor: myTheme.palette.primary.dark
+          },
+          '&:active': {
+            backgroundColor: myTheme.palette.primary.dark
           }
         },
         outlinedPrimary: {
@@ -53,7 +56,11 @@ myTheme = createTheme(myTheme, {
           '&:hover': {
             backgroundColor: myTheme.palette.secondary.dark,
             borderStyle: "none"
-          }
+          },
+          '&:active': {
+            backgroundColor: myTheme.palette.secondary.dark,
+            borderStyle: "none"
+          },
         },
         containedError: {
           color: myTheme.palette.error.main,
@@ -62,11 +69,17 @@ myTheme = createTheme(myTheme, {
             backgroundColor: myTheme.palette.error.main,
             color: myTheme.palette.grey.background
           },
-
+          '&:active': {
+            color: myTheme.palette.error.main,
+            backgroundColor: myTheme.palette.error.light
+          },
         },
         outlinedError: {
           backgroundColor: myTheme.palette.grey.background,
           '&:hover': {
+            backgroundColor: myTheme.palette.error.light
+          },
+          '&:active': {
             backgroundColor: myTheme.palette.error.light
           }
         },
@@ -76,12 +89,19 @@ myTheme = createTheme(myTheme, {
           '&:hover': {
             backgroundColor: myTheme.palette.success.dark,
             color: myTheme.palette.grey.background
+          },
+          '&:active': {
+            backgroundColor: myTheme.palette.success.light,
+            color: myTheme.palette.success.dark
           }
         },
         outlinedSuccess: {
           backgroundColor: myTheme.palette.grey.background,
           borderStyle: "1px solid myTheme.palette.success.main",
           '&:hover': {
+            borderStyle: "1px solid myTheme.palette.success.main"
+          },
+          '&:active': {
             borderStyle: "1px solid myTheme.palette.success.main"
           }
         },
@@ -91,11 +111,19 @@ myTheme = createTheme(myTheme, {
           '&:hover': {
             backgroundColor: myTheme.palette.warning.main,
             color: myTheme.palette.grey.background
+          },
+          '&:active': {
+            backgroundColor: myTheme.palette.warning.light,
+            color: myTheme.palette.warning.dark
           }
         },
         outlinedWarning: {
           backgroundColor: myTheme.palette.grey.background,
           '&:hover': {
+            backgroundColor: myTheme.palette.warning.light,
+            borderStyle: "1px solid myTheme.palette.warning.main"
+          },
+          '&:active': {
             backgroundColor: myTheme.palette.warning.light,
             borderStyle: "1px solid myTheme.palette.warning.main"
           }
