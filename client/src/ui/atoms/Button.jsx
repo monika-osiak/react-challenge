@@ -162,5 +162,6 @@ export function Button({ children, ...props }) {
     {...props}
     theme={myTheme}
     onClick={doSomething}
+    sx={{margin:"5px"}}
   >{children}</MuiButton>;
 }
