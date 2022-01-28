@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { Button as MuiButton } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { createTheme } from '@mui/material/styles';
 import '../styles.css';
 
@@ -56,7 +58,8 @@ myTheme = createTheme(myTheme, {
           fontSize: 15,
           display: 'flex',
           alignItems: 'center',
-          textAlign: 'center'
+          textAlign: 'center',
+          padding: '8px 12px'
         },
 
         contained: ({ ownerState, theme }) => ({
@@ -137,6 +140,22 @@ myTheme = createTheme(myTheme, {
     }
   }
 })
+
+export function PlusIcon({children, ...props}) {
+  return <AddIcon
+    {...props}
+    sx={{transform: "rotate(-180deg)", fontSize:'1rem'}}
+    theme={myTheme}
+  >{children}</AddIcon>
+}
+
+export function LeftIcon({children, ...props}) {
+  return <ChevronLeftIcon
+    {...props}
+    sx={{transform: "rotate(-180deg)", fontSize:'1rem'}}
+    theme={myTheme}
+  >{children}</ChevronLeftIcon>
+}
 
 export function Button({ children, ...props }) {
   return <MuiButton

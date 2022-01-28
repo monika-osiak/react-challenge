@@ -1,9 +1,8 @@
 import React from 'react';
 
 import { Button } from '../ui';
+import { PlusIcon, LeftIcon } from '../ui/atoms/Button'
 import { Grid, Typography } from '@mui/material';
-import AddIcon from '@mui/icons-material/Add';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -74,37 +73,35 @@ const All = () => (
       </Button>
       <Grid item xs={12} sx={{ mb: 2 }}></Grid>
       <Button variant={'contained'} color={'primary'}>
-        <AddIcon></AddIcon>
+        <PlusIcon></PlusIcon>
         Button
       </Button>
       <Button variant={'contained'} color={'error'}>
-        <AddIcon></AddIcon>
+        <PlusIcon></PlusIcon>
         Button
       </Button>
       <Button variant={'contained'} color={'success'}>
-        <AddIcon></AddIcon>
-        Button
+        <PlusIcon></PlusIcon>
+        Button with a really long name
       </Button>
       <Button variant={'contained'} color={'warning'}>
-        <AddIcon></AddIcon>
-        Button
+        <PlusIcon></PlusIcon>
       </Button>
       <Grid item xs={12} sx={{ mb: 2 }}></Grid>
       <Button variant={'contained'} color={'primary'}>
-        Button
-        <ChevronLeftIcon sx={{transform: "rotate(-180deg)"}}></ChevronLeftIcon>
+        Button with a really long name
+        <LeftIcon></LeftIcon>
       </Button>
       <Button variant={'contained'} color={'error'}>
-        Button
-        <ChevronLeftIcon sx={{transform: "rotate(-180deg)"}}></ChevronLeftIcon>
+        <LeftIcon></LeftIcon>
       </Button>
       <Button variant={'contained'} color={'success'}>
         Button
-        <ChevronLeftIcon sx={{transform: "rotate(-180deg)"}}></ChevronLeftIcon>
+        <LeftIcon></LeftIcon>
       </Button>
       <Button variant={'contained'} color={'warning'}>
         Button
-        <ChevronLeftIcon sx={{transform: "rotate(-180deg)"}}></ChevronLeftIcon>
+        <LeftIcon></LeftIcon>
       </Button>
     </Grid>
 
@@ -139,37 +136,37 @@ const All = () => (
       </Button>
       <Grid item xs={12} sx={{ mb: 2 }}></Grid>
       <Button variant={'outlined'} color={'primary'}>
-        <AddIcon></AddIcon>
+        <PlusIcon></PlusIcon>
         Button
       </Button>
       <Button variant={'outlined'} color={'error'}>
-        <AddIcon></AddIcon>
+        <PlusIcon></PlusIcon>
         Button
       </Button>
       <Button variant={'outlined'} color={'success'}>
-        <AddIcon></AddIcon>
+        <PlusIcon></PlusIcon>
         Button
       </Button>
       <Button variant={'outlined'} color={'warning'}>
-        <AddIcon></AddIcon>
+        <PlusIcon></PlusIcon>
         Button
       </Button>
       <Grid item xs={12} sx={{ mb: 2 }}></Grid>
       <Button variant={'outlined'} color={'primary'}>
         Button
-        <ChevronLeftIcon sx={{transform: "rotate(-180deg)"}}></ChevronLeftIcon>
+        <LeftIcon></LeftIcon>
       </Button>
       <Button variant={'outlined'} color={'error'}>
         Button
-        <ChevronLeftIcon sx={{transform: "rotate(-180deg)"}}></ChevronLeftIcon>
+        <LeftIcon></LeftIcon>
       </Button>
       <Button variant={'outlined'} color={'success'}>
         Button
-        <ChevronLeftIcon sx={{transform: "rotate(-180deg)"}}></ChevronLeftIcon>
+        <LeftIcon></LeftIcon>
       </Button>
       <Button variant={'outlined'} color={'warning'}>
         Button
-        <ChevronLeftIcon sx={{transform: "rotate(-180deg)"}}></ChevronLeftIcon>
+        <LeftIcon></LeftIcon>
       </Button>
     </Grid>
   </>
