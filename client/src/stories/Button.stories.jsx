@@ -47,6 +47,7 @@ const All = () => (
         <Typography variant={'subheading'}>Contained</Typography>
       </Grid>
       <Button variant={'contained'} color={'primary'}>
+        <PlusIcon></PlusIcon>
         Button
       </Button>
       <Button variant={'contained'} color={'error'}>
@@ -54,6 +55,7 @@ const All = () => (
       </Button>
       <Button variant={'contained'} color={'success'}>
         Button
+        <LeftIcon></LeftIcon>
       </Button>
       <Button variant={'contained'} color={'warning'}>
         Button
@@ -71,38 +73,6 @@ const All = () => (
       <Button variant={'contained'} color={'warning'} disabled>
         Button
       </Button>
-      <Grid item xs={12} sx={{ mb: 2 }}></Grid>
-      <Button variant={'contained'} color={'primary'}>
-        <PlusIcon></PlusIcon>
-        Button
-      </Button>
-      <Button variant={'contained'} color={'error'}>
-        <PlusIcon></PlusIcon>
-        Button
-      </Button>
-      <Button variant={'contained'} color={'success'}>
-        <PlusIcon></PlusIcon>
-        Button with a really long name
-      </Button>
-      <Button variant={'contained'} color={'warning'}>
-        <PlusIcon></PlusIcon>
-      </Button>
-      <Grid item xs={12} sx={{ mb: 2 }}></Grid>
-      <Button variant={'contained'} color={'primary'}>
-        Button with a really long name
-        <LeftIcon></LeftIcon>
-      </Button>
-      <Button variant={'contained'} color={'error'}>
-        <LeftIcon></LeftIcon>
-      </Button>
-      <Button variant={'contained'} color={'success'}>
-        Button
-        <LeftIcon></LeftIcon>
-      </Button>
-      <Button variant={'contained'} color={'warning'}>
-        Button
-        <LeftIcon></LeftIcon>
-      </Button>
     </Grid>
 
     <Grid container sx={{ mt: 5 }}>
@@ -116,10 +86,12 @@ const All = () => (
         Button
       </Button>
       <Button variant={'outlined'} color={'success'}>
+        <PlusIcon></PlusIcon>
         Button
       </Button>
       <Button variant={'outlined'} color={'warning'}>
         Button
+        <LeftIcon></LeftIcon>
       </Button>
       <Grid item xs={12} sx={{ mb: 2 }}></Grid>
       <Button variant={'outlined'} color={'primary'} disabled>
@@ -133,40 +105,6 @@ const All = () => (
       </Button>
       <Button variant={'outlined'} color={'warning'} disabled>
         Button
-      </Button>
-      <Grid item xs={12} sx={{ mb: 2 }}></Grid>
-      <Button variant={'outlined'} color={'primary'}>
-        <PlusIcon></PlusIcon>
-        Button
-      </Button>
-      <Button variant={'outlined'} color={'error'}>
-        <PlusIcon></PlusIcon>
-        Button
-      </Button>
-      <Button variant={'outlined'} color={'success'}>
-        <PlusIcon></PlusIcon>
-        Button
-      </Button>
-      <Button variant={'outlined'} color={'warning'}>
-        <PlusIcon></PlusIcon>
-        Button
-      </Button>
-      <Grid item xs={12} sx={{ mb: 2 }}></Grid>
-      <Button variant={'outlined'} color={'primary'}>
-        Button
-        <LeftIcon></LeftIcon>
-      </Button>
-      <Button variant={'outlined'} color={'error'}>
-        Button
-        <LeftIcon></LeftIcon>
-      </Button>
-      <Button variant={'outlined'} color={'success'}>
-        Button
-        <LeftIcon></LeftIcon>
-      </Button>
-      <Button variant={'outlined'} color={'warning'}>
-        Button
-        <LeftIcon></LeftIcon>
       </Button>
     </Grid>
   </>
