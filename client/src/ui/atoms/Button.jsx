@@ -46,6 +46,11 @@ myTheme = createTheme(myTheme, {
   components: {
     MuiButton: {
       styleOverrides: {
+        root: {
+          textTransform: 'none',
+          boxShadow: 'none'
+        },
+
         contained: ({ ownerState, theme }) => ({
           ...(ownerState.color) && {
             backgroundColor: theme.palette[ownerState.color].light,
