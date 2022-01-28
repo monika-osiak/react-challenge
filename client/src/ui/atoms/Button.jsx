@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Button as MuiButton } from '@mui/material';
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from '@mui/material/styles';
 
 function doSomething() {
   alert('I have no idea what I\'m doing honestly')
@@ -28,6 +28,7 @@ let myTheme = createTheme({
     },
     error: {
       main: "#FF5D5D",
+      dark: "#FF5D5D",
       light: "#FCECE6"
     },
     grey: {
@@ -45,122 +46,89 @@ myTheme = createTheme(myTheme, {
   components: {
     MuiButton: {
       styleOverrides: {
-        root: {
-          '&.Mui-disabled': {
-            backgroundColor: myTheme.palette.grey.level1,
-            color: myTheme.palette.grey.level3
+        contained: ({ ownerState, theme }) => ({
+          ...(ownerState.color) && {
+            backgroundColor: theme.palette[ownerState.color].light,
+            color: theme.palette[ownerState.color].dark,
+            '&:hover': {
+              backgroundColor: theme.palette[ownerState.color].main,
+              color: theme.palette['grey'].background
+            },
+            '&:active': {
+              backgroundColor: theme.palette[ownerState.color].light,
+              color: theme.palette[ownerState.color].dark,
+            },
+            '&.Mui-disabled': {
+              backgroundColor: myTheme.palette.grey.level1,
+              color: myTheme.palette.grey.level3,
+            }
           }
-        },
-        containedPrimary: {
-          backgroundColor: myTheme.palette.primary.main,
-          '&:hover': {
-            backgroundColor: myTheme.palette.primary.dark
-          },
-          '&:active': {
-            backgroundColor: myTheme.palette.primary.dark
-          }
-        },
-        outlinedPrimary: {
-          backgroundColor: myTheme.palette.secondary.main,
-          border: "none",
-          '&:hover': {
-            backgroundColor: myTheme.palette.secondary.dark,
-            borderStyle: "none"
-          },
-          '&:active': {
-            backgroundColor: myTheme.palette.secondary.dark,
-            borderStyle: "none"
-          },
-          '&.Mui-disabled': {
-            border: "none"
-          }
-        },
-        containedError: {
-          color: myTheme.palette.error.main,
-          backgroundColor: myTheme.palette.error.light,
-          '&:hover': {
-            backgroundColor: myTheme.palette.error.main,
-            color: myTheme.palette.grey.background
-          },
-          '&:active': {
-            color: myTheme.palette.error.main,
-            backgroundColor: myTheme.palette.error.light
-          },
-        },
-        outlinedError: {
-          backgroundColor: myTheme.palette.grey.background,
-          '&:hover': {
-            backgroundColor: myTheme.palette.error.light
-          },
-          '&:active': {
-            backgroundColor: myTheme.palette.error.light
-          },
-          '&.Mui-disabled': {
-            color: myTheme.palette.grey.level2,
-            backgroundColor: myTheme.palette.grey.background,
-            borderColor: myTheme.palette.grey.level2
-          }
-        },
+        }),
+
         containedSuccess: {
-          backgroundColor: myTheme.palette.success.light,
-          color: myTheme.palette.success.dark,
           '&:hover': {
             backgroundColor: myTheme.palette.success.dark,
-            color: myTheme.palette.grey.background
           },
           '&:active': {
             backgroundColor: myTheme.palette.success.light,
-            color: myTheme.palette.success.dark
+            color: myTheme.palette.success.dark,
           }
         },
-        outlinedSuccess: {
-          backgroundColor: myTheme.palette.grey.background,
-          borderStyle: "1px solid myTheme.palette.success.main",
+
+        containedPrimary: {
+          backgroundColor: myTheme.palette.primary.main,
+          color: myTheme.palette.grey.background,
           '&:hover': {
-            borderStyle: "1px solid myTheme.palette.success.main"
-          },
-          '&:active': {
-            borderStyle: "1px solid myTheme.palette.success.main"
-          },
-          '&.Mui-disabled': {
-            color: myTheme.palette.grey.level2,
-            backgroundColor: myTheme.palette.grey.background,
-            borderColor: myTheme.palette.grey.level2
-          }
-        },
-        containedWarning: {
-          backgroundColor: myTheme.palette.warning.light,
-          color: myTheme.palette.warning.dark,
-          '&:hover': {
-            backgroundColor: myTheme.palette.warning.main,
+            backgroundColor: myTheme.palette.primary.dark,
             color: myTheme.palette.grey.background
-          },
-          '&:active': {
-            backgroundColor: myTheme.palette.warning.light,
-            color: myTheme.palette.warning.dark
           }
         },
-        outlinedWarning: {
-          backgroundColor: myTheme.palette.grey.background,
+
+        outlined: ({ ownerState, theme }) => ({
+          ...(ownerState.color) && {
+            backgroundColor: theme.palette['grey'].background,
+            color: theme.palette[ownerState.color].main,
+            borderSize: 1,
+            borderColor: theme.palette[ownerState.color].main,
+            '&:hover': {
+              backgroundColor: theme.palette[ownerState.color].light
+            },
+            '&.Mui-disabled': {
+              backgroundColor: myTheme.palette.grey.background,
+              color: myTheme.palette.grey.level2,
+              borderColor: myTheme.palette.grey.level1
+            }
+          }
+        }),
+
+        outlinedSuccess: {
+          color: myTheme.palette.success.dark
+        },
+
+        outlinedPrimary: {
+          backgroundColor: myTheme.palette.secondary.main,
+          color: myTheme.palette.primary.main,
+          border: 'none',
           '&:hover': {
-            backgroundColor: myTheme.palette.warning.light,
-            borderStyle: "1px solid myTheme.palette.warning.main"
-          },
-          '&:active': {
-            backgroundColor: myTheme.palette.warning.light,
-            borderStyle: "1px solid myTheme.palette.warning.main"
+            backgroundColor: myTheme.palette.secondary.dark,
+            color: myTheme.palette.primary.dark,
+            border: 'none'
           },
           '&.Mui-disabled': {
-            color: myTheme.palette.grey.level2,
-            backgroundColor: myTheme.palette.grey.background,
-            borderColor: myTheme.palette.grey.level2
+            backgroundColor: myTheme.palette.grey.level1,
+            color: myTheme.palette.grey.level3,
+            border: 'none'
           }
-        },
+        }
       }
     }
   }
 })
 
 export function Button({ children, ...props }) {
-  return <MuiButton {...props} theme={ myTheme } onClick={doSomething}>{children}</MuiButton>;
+  return <MuiButton
+    {...props}
+    theme={myTheme}
+    onClick={doSomething}
+  >{children}</MuiButton>;
 }
