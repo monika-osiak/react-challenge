@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Button as MuiButton } from '@mui/material';
 import { createTheme } from '@mui/material/styles';
+import '../styles.css';
 
 function doSomething() {
   alert('I have no idea what I\'m doing honestly')
@@ -46,11 +47,6 @@ myTheme = createTheme(myTheme, {
   components: {
     MuiButton: {
       styleOverrides: {
-        root: {
-          textTransform: 'none',
-          boxShadow: 'none'
-        },
-
         contained: ({ ownerState, theme }) => ({
           ...(ownerState.color) && {
             backgroundColor: theme.palette[ownerState.color].light,
