@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material';
 import logo from '../../assets/unknown_error.png';
+import '../styles.css';
 
 export const Error = ({ error }) => {
   return (
@@ -16,8 +17,22 @@ export const Error = ({ error }) => {
           <Typography>Uruchom Server!</Typography>
         ) : (
           <div>
-            <img style={{display: "block", "margin-left": "auto", "margin-right": "auto"}} src={logo}/>
-            <p style={{ color: "#333333", opacity: 0.5, "text-align": "center" }}>Wystąpił nieoczekiwany błąd</p>
+            <img style={{
+              display: 'block',
+              marginLeft: 'auto',
+              marginRight: 'auto'
+            }} src={logo}/>
+            <p style={{
+              color: '#333333',
+              opacity: 0.5,
+              textAlign: 'center',
+              fontFamily: 'Inter',
+              fontStyle: 'normal',
+              fontWeight: 'normal',
+              fontSize: '19.2px',
+              lineHeight: '29px',
+              marginTop: 0
+            }}>Wystąpił nieoczekiwany błąd</p>
           </div>
         )
       }
