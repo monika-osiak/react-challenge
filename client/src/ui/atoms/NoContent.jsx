@@ -4,31 +4,10 @@ import '../styles.css';
 
 export const NoContent = () => {
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'column',
-      }}
-    >
+    <Box class={'message-box'}>
       <div>
-        <img style={{
-          display: 'block',
-          marginLeft: 'auto',
-          marginRight: 'auto'
-        }} src={logo}/>
-        <p style={{
-          color: '#333333',
-          opacity: 0.5,
-          textAlign: 'center',
-          fontFamily: 'Inter',
-          fontStyle: 'normal',
-          fontWeight: 'normal',
-          fontSize: '19.2px',
-          lineHeight: '29px',
-          marginTop: 0
-        }}>Brak danych do wyświetlenia</p>
+        <img className={'box-img'} src={logo}/>
+        <p className={'box-p'}>Brak danych do wyświetlenia</p>
       </div>
     </Box>
   );

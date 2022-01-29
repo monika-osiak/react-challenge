@@ -1,5 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 
 * {
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
+}
+
+.message-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box-p {
+    color: #333333;
+    opacity: 0.5;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19.2px;
+    line-height: 29px;
+    margin-top: 0
 }
