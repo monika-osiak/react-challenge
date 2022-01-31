@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { Button } from '../ui';
-import { PlusIcon, LeftIcon } from '../ui/atoms/Button'
+import AddIcon from '@mui/icons-material/Add';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import { Grid, Typography } from '@mui/material';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -46,16 +47,24 @@ const All = () => (
       <Grid item xs={12} sx={{ mb: 2 }}>
         <Typography variant={'subheading'}>Contained</Typography>
       </Grid>
-      <Button variant={'contained'} color={'primary'}>
-        <PlusIcon></PlusIcon>
+      <Button
+        variant={'contained'}
+        color={'primary'}
+        startIcon={<AddIcon></AddIcon>}
+      >
         Button
       </Button>
       <Button variant={'contained'} color={'error'}>
         Button
       </Button>
-      <Button variant={'contained'} color={'success'}>
+      <Button
+        variant={'contained'}
+        color={'success'}
+        endIcon={<ChevronLeftIcon sx={{
+          transform: "rotate(-180deg)"
+        }}></ChevronLeftIcon>}
+      >
         Button
-        <LeftIcon></LeftIcon>
       </Button>
       <Button variant={'contained'} color={'warning'}>
         Button
@@ -85,13 +94,21 @@ const All = () => (
       <Button variant={'outlined'} color={'error'}>
         Button
       </Button>
-      <Button variant={'outlined'} color={'success'}>
-        <PlusIcon></PlusIcon>
+      <Button
+        variant={'outlined'}
+        color={'success'}
+        startIcon={<AddIcon></AddIcon>}
+      >
         Button
       </Button>
-      <Button variant={'outlined'} color={'warning'}>
+      <Button
+        variant={'outlined'}
+        color={'warning'}
+        endIcon={<ChevronLeftIcon sx={{
+          transform: "rotate(-180deg)"
+        }}></ChevronLeftIcon>}
+      >
         Button
-        <LeftIcon></LeftIcon>
       </Button>
       <Grid item xs={12} sx={{ mb: 2 }}></Grid>
       <Button variant={'outlined'} color={'primary'} disabled>
